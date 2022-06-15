@@ -1,0 +1,32 @@
+version: '3'
+services:
+
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysqldb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: livroservice
+    volumes:
+      - data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - livro-net
+
+  sonarqube:
+    image: sonarqube:lts
+    container_name: sonarqube
+    ports:
+      - 9000:9000
+    networks:
+      - livro-net
+
+volumes:
+   data:
+
+networks:
+  livro-net:
+    driver: bridge
