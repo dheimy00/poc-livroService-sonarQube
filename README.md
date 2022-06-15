@@ -5,7 +5,7 @@ SonarQube é uma ferramenta para garantir a qualidade do código fonte em desenv
 Ele realiza diversas análises durante o processo de compilação da aplicação, detectando por exemplo:
 Trechos de código fonte que possam gerar bugs
 Duplicidade de linhas de comando, prevenindo a repetição de instruções desnecessárias
-Segurança
+Segurança.
 
 ### Jacoco
 Jacoco é uma ferramenta de cobertura de linha ativamente desenvolvida, que é usado para medir quantas linhas de nosso código são testadas.
